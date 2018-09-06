@@ -1,0 +1,5 @@
+<app-contact-form
+  *ngIf="contact"
+  [model]="contact"
+  (save)="submit($event)"
+></app-contact-form>
