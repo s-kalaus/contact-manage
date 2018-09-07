@@ -13,7 +13,7 @@ export class DemoEditComponent implements OnInit {
   /*
    * Current contact id
    */
-  private contactId: number = null;
+  contactId: number = null;
 
   /*
    * Constructor

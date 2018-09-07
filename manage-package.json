@@ -1,8 +1,0 @@
-{
-  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "dist/contact-manage",
-  "deleteDestPath": false,
-  "lib": {
-    "entryFile": "src/app/public_api_manage.ts"
-  }
-}

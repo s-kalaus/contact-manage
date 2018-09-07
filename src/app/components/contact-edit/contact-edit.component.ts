@@ -26,7 +26,7 @@ export class ContactEditComponent implements OnInit {
   /*
    * Opened contact
    */
-  private contact: Contact = null;
+  contact: Contact = null;
 
   /*
    * Constructor
