@@ -30,6 +30,11 @@ export class DemoEditComponent implements OnInit {
    */
   ngOnInit() {
 
-    this.activatedRoute.params.subscribe(params => this.contactId = params.contactId);
+    this.activatedRoute.params.subscribe(params => {
+
+      this.contactId = null;
+
+      setTimeout(() => this.contactId = params.contactId);
+    });
   }
 }

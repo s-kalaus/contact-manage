@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
+import {ContactAddComponent} from 'contact-manage';
 
-import {ContactAddComponent} from './components/contact-add/contact-add.component';
 import {DemoEditComponent} from './components/demo/demo-edit/demo-edit.component';
 
 const routes: Routes = [
