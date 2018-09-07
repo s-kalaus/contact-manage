@@ -1,6 +1,6 @@
 {
   "name": "contact-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
