@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BrowserDatabase} from 'browser-database';
 
-import {Contact} from '../interfaces';
+import {Contact, ContactFilter} from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +9,23 @@ import {Contact} from '../interfaces';
 export class DatabaseService {
 
   /*
-   * Model name
+   * Contact model name
    */
-  private readonly contactModel = 'contact';
+  readonly contactModel = 'contact';
+
+  /*
+   * Contact filter model name
+   */
+  private readonly contactFilterModel = 'contact-filter';
+  /*
+   * Contact filter id
+   */
+  private readonly contactFilterId = 'contact';
 
   /*
    * Local database reference
    */
-  private browserDatabase: BrowserDatabase = new BrowserDatabase();
+  public browserDatabase: BrowserDatabase = new BrowserDatabase();
 
   /*
    * Insert contact
@@ -44,8 +53,52 @@ export class DatabaseService {
    *
    * @param contactId Contact id
    */
-  get(contactId: number | string) {
+  getById(contactId: number | string) {
 
     return this.browserDatabase.getById(this.contactModel, contactId);
+  }
+
+  /*
+   * Get contacts
+   */
+  getAll() {
+
+    return this.browserDatabase.getAll(this.contactModel);
+  }
+
+  /*
+   * Loads filter from database
+   */
+  loadFilter() {
+
+    return this.browserDatabase.getById(this.contactFilterModel, this.contactFilterId)
+        .catch(() => this.createDefaultFilter());
+  }
+
+  /*
+   * Creates default filter
+   */
+  createDefaultFilter() {
+
+    return this.browserDatabase.insert(this.contactFilterModel, {
+      id: this.contactFilterId,
+      sortBy: 'id',
+      sortDir: true,
+      filter: {
+        id: '',
+        firstName: '',
+        lastName: ''
+      }
+    });
+  }
+
+  /*
+   * Saves filter to database
+   *
+   * @param filter Current filter
+   */
+  saveFilter(filter: ContactFilter) {
+
+    return this.browserDatabase.update(this.contactFilterModel, this.contactFilterId, filter);
   }
 }

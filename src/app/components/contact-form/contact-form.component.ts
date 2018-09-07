@@ -1,4 +1,4 @@
-import {Component, NgZone, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, NgZone, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import {Contact} from '../../interfaces';
@@ -11,6 +11,11 @@ import {Contact} from '../../interfaces';
   templateUrl: './contact-form.component.html'
 })
 export class ContactFormComponent implements OnInit {
+
+  /*
+   * Back Url
+   */
+  @Input() backUrl: string[] = [];
 
   /*
    * Model reference
@@ -30,14 +35,6 @@ export class ContactFormComponent implements OnInit {
    * Form holder
    */
   form: FormGroup;
-
-  /*
-   * Common form errors
-   */
-  private readonly errors: any = {
-    required: 'FIeld is required'
-  };
-
   /*
    * Local form errors
    */
@@ -45,6 +42,12 @@ export class ContactFormComponent implements OnInit {
     firstName: '',
     lastName: '',
     company: ''
+  };
+  /*
+   * Common form errors
+   */
+  private readonly errors: any = {
+    required: 'FIeld is required'
   };
 
   /*
@@ -54,8 +57,8 @@ export class ContactFormComponent implements OnInit {
    * @param formBuilder FormBuilder
    */
   constructor(
-    private zone: NgZone,
-    private formBuilder: FormBuilder
+      private zone: NgZone,
+      private formBuilder: FormBuilder
   ) {
 
     this.createForm();
@@ -87,7 +90,7 @@ export class ContactFormComponent implements OnInit {
     });
 
     this.form.valueChanges
-      .subscribe(() => this.onValueChanged());
+        .subscribe(() => this.onValueChanged());
 
     this.onValueChanged();
   }
@@ -135,5 +138,7 @@ export class ContactFormComponent implements OnInit {
     }
 
     this.save.emit(this.form.value);
+
+    this.form.reset();
   }
 }

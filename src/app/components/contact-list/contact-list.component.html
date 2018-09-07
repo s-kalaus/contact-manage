@@ -1,0 +1,26 @@
+<h3 class="mb-4">Contacts List</h3>
+<table class="table table-striped" *ngIf="contactFilter && contacts.length">
+    <thead>
+        <tr>
+            <th scope="col">
+                # <a class="badge badge-light" href="javascript:;" (click)="sort('id')"><></a>
+            </th>
+            <th scope="col">
+                <div><input type="text" class="form-control form-control-sm" [(ngModel)]="contactFilter.filter['firstName']" (change)="filter()" (keyup)="filter()" /></div>
+                <div>First Name <a class="badge badge-light" href="javascript:;" (click)="sort('firstName')"><></a></div>
+            </th>
+            <th scope="col">
+                <div><input type="text" class="form-control form-control-sm" [(ngModel)]="contactFilter.filter['lastName']" (change)="filter()" (keyup)="filter()" /></div>
+                <div>Last Name <a class="badge badge-light" href="javascript:;" (click)="sort('lastName')"><></a></div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contactsFiltered">
+            <th scope="row"><a [routerLink]="['contact', contact.id]" [title]="contact.id">{{ contact.id | slice: 0: 8 }}</a></th>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.lastName }}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" *ngIf="!contactsFiltered.length">No Contacts Found</div>

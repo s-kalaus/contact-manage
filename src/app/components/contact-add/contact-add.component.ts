@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 import {DatabaseService} from '../../services/database.service';
 import {Contact} from '../../interfaces';
@@ -18,8 +18,9 @@ export class ContactAddComponent {
    * @param databaseService DatabaseService
    */
   constructor(
-    private databaseService: DatabaseService
-  ) {}
+      private databaseService: DatabaseService
+  ) {
+  }
 
   /*
    * Submit contact

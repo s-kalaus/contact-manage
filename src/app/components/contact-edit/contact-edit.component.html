@@ -1,5 +1,8 @@
-<app-contact-form
-  *ngIf="contact"
-  [model]="contact"
-  (save)="submit($event)"
-></app-contact-form>
+<div *ngIf="contact">
+    <h3 class="mb-4">Edit Contact {{ contact.id | slice: 0: 5 }}</h3>
+    <app-contact-form
+            [backUrl]="backUrl"
+            [model]="contact"
+            (save)="submit($event)"
+    ></app-contact-form>
+</div>

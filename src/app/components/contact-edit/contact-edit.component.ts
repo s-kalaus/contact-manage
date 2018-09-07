@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 import {DatabaseService} from '../../services/database.service';
 import {Contact} from '../../interfaces';
@@ -14,6 +14,16 @@ import {Contact} from '../../interfaces';
 export class ContactEditComponent implements OnInit {
 
   /*
+   * Current contact id
+   */
+  @Input() contactId: number = null;
+
+  /*
+   * Back Url
+   */
+  @Input() backUrl: string[] = ['/'];
+
+  /*
    * Opened contact
    */
   private contact: Contact = null;
@@ -22,39 +32,24 @@ export class ContactEditComponent implements OnInit {
    * Constructor
    *
    * @param databaseService DatabaseService
-   * @param activatedRoute ActivatedRoute
    * @param router Router
    */
   constructor(
-    private databaseService: DatabaseService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) {}
+      private databaseService: DatabaseService,
+      private router: Router
+  ) {
+  }
 
   /*
    * ngOnInit
    */
   ngOnInit() {
 
-    this.activatedRoute.params.subscribe(params => this.getContact(params.contactId));
-  }
-
-  /*
-   * Update contact
-   *
-   * @param contactId ID of opened contact
-   */
-  getContact(contactId: number) {
-
-    if (!contactId) {
-      return;
-    }
-
-    this.databaseService.get(contactId)
-      .then(
-        (_contact: Contact) => this.contact = _contact,
-        () => this.router.navigate(['/'])
-      );
+    this.databaseService.getById(this.contactId)
+        .then(
+            (_contact: Contact) => this.contact = _contact,
+            () => this.router.navigate(this.backUrl)
+        );
   }
 
   /*
@@ -65,6 +60,6 @@ export class ContactEditComponent implements OnInit {
   submit(model: Contact) {
 
     this.databaseService.update(this.contact.id, model)
-      .then(() => this.router.navigate(['/']));
+        .then(() => this.router.navigate(this.backUrl));
   }
 }

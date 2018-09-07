@@ -3,23 +3,23 @@
  */
 export interface Contact {
 
-    /*
-     * ID of contact
-     */
-    id?: number | string;
+  /*
+   * ID of contact
+   */
+  id?: number | string;
 
-    /*
-     * First Name
-     */
-    firstName: string;
+  /*
+   * First Name
+   */
+  firstName: string;
 
-    /*
-     * Last Name
-     */
-    lastName: string;
+  /*
+   * Last Name
+   */
+  lastName: string;
 
-    /*
-     * Company
-     */
-    company: string;
+  /*
+   * Company
+   */
+  company: string;
 }
