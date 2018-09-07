@@ -41,5 +41,4 @@ describe('ContactAddComponent', () => {
       expect(component.databaseService.insert).toHaveBeenCalledWith({test: 1});
     });
   });
-
 });

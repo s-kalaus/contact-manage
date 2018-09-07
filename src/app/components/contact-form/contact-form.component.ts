@@ -34,7 +34,9 @@ export class ContactFormComponent implements OnInit {
   /*
    * Form holder
    */
+
   form: FormGroup;
+
   /*
    * Local form errors
    */
@@ -43,11 +45,12 @@ export class ContactFormComponent implements OnInit {
     lastName: '',
     company: ''
   };
+
   /*
    * Common form errors
    */
   private readonly errors: any = {
-    required: 'FIeld is required'
+    required: 'Field is required'
   };
 
   /*

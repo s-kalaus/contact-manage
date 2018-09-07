@@ -59,7 +59,7 @@ export class ContactEditComponent implements OnInit {
    */
   submit(model: Contact) {
 
-    this.databaseService.update(this.contact.id, model)
+    this.databaseService.update(this.contactId, model)
         .then(() => this.router.navigate(this.backUrl));
   }
 }

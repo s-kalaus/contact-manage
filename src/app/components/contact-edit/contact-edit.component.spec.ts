@@ -9,6 +9,7 @@ describe('ContactEditComponent', () => {
   let component: any;
   let subscription: any;
   let resolve: any;
+  let reject: any;
   let fixture: ComponentFixture<ContactEditComponent>;
 
   beforeEach(async(() => {
@@ -18,7 +19,15 @@ describe('ContactEditComponent', () => {
         {
           provide: DatabaseService,
           useValue: {
-            update: jasmine.createSpy('update').and.returnValue(new Promise(_resolve => resolve = _resolve))
+            getById: jasmine.createSpy('getById').and
+              .returnValue({
+                then: (_resolve: any, _reject: any) => {
+                  resolve = _resolve;
+                  reject = _reject;
+                }
+              }),
+            update: jasmine.createSpy('update').and
+              .returnValue({then: (_resolve: any) => resolve = _resolve})
           }
         },
         {
@@ -47,23 +56,48 @@ describe('ContactEditComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  describe('Function: ngOnInit', () => {
+    it('should exist', () => {
+      expect(component.ngOnInit).toEqual(jasmine.any(Function));
+    });
+
+    it('should call databaseService.getById', () => {
+      component.contactId = 1;
+      component.ngOnInit();
+      expect(component.databaseService.getById).toHaveBeenCalledWith(1);
+    });
+
+    it('should call router.navigate on reject', () => {
+      component.contactId = 1;
+      component.ngOnInit();
+      reject();
+      expect(component.router.navigate).toHaveBeenCalledWith(['/']);
+    });
+
+    it('should update contact on success', () => {
+      component.contactId = 1;
+      component.ngOnInit();
+      resolve({test: 1});
+      expect(component.contact).toEqual({test: 1});
+    });
+  });
+
   describe('Function: submit', () => {
     it('should exist', () => {
       expect(component.submit).toEqual(jasmine.any(Function));
     });
 
     it('should call databaseService.update', () => {
-      component.contact = {id: 1};
+      component.contactId = 1;
       component.submit({test: 1});
       expect(component.databaseService.update).toHaveBeenCalledWith(1, {test: 1});
     });
 
     it('should call router.navigate', () => {
-      component.contact = {id: 1};
+      component.contactId = 1;
       component.submit({test: 1});
       resolve();
       expect(component.router.navigate).toHaveBeenCalledWith(['/']);
     });
   });
-
 });
