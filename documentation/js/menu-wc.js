@@ -14,7 +14,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         let tp = lithtml.html(`<nav>
     <ul class="list">
         <li class="title">
-            <a href="index.html" data-type="index-link">contact-manage documentation</a>
+            <a href="index.html" data-type="index-link">contact-demo documentation</a>
         </li>
         <li class="divider"></li>
         ${ isNormalMode ? `<div id="book-search-input" role="search">
@@ -57,25 +57,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-9a169517f361693e8f85c098cf820f52"' : 'data-target="#xs-components-links-module-AppModule-9a169517f361693e8f85c098cf820f52"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-9312cc841d84809f294bff44431aa22b"' : 'data-target="#xs-components-links-module-AppModule-9312cc841d84809f294bff44431aa22b"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-9a169517f361693e8f85c098cf820f52"' : 'id="xs-components-links-module-AppModule-9a169517f361693e8f85c098cf820f52"' }>
-                                        <li class="link">
-                                            <a href="components/ContactAddComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactAddComponent</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="components/ContactEditComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactEditComponent</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="components/ContactFormComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactFormComponent</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="components/ContactListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactListComponent</a>
-                                        </li>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-9312cc841d84809f294bff44431aa22b"' : 'id="xs-components-links-module-AppModule-9312cc841d84809f294bff44431aa22b"' }>
                                         <li class="link">
                                             <a href="components/DemoComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">DemoComponent</a>
                                         </li>
@@ -87,6 +75,37 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     </li>
                     <li class="link">
                         <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
+                    </li>
+                    <li class="link">
+                        <a href="modules/ContactListModule.html" data-type="entity-link">ContactListModule</a>
+                            <li class="chapter inner">
+                                <div class="simple menu-toggler" data-toggle="collapse"
+                                    ${ isNormalMode ? 'data-target="#components-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' : 'data-target="#xs-components-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' }>
+                                    <span class="icon ion-md-cog"></span>
+                                    <span>Components</span>
+                                    <span class="icon ion-ios-arrow-down"></span>
+                                </div>
+                                <ul class="links collapse"
+                                    ${ isNormalMode ? 'id="components-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' : 'id="xs-components-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' }>
+                                        <li class="link">
+                                            <a href="components/ContactListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContactListComponent</a>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li class="chapter inner">
+                                <div class="simple menu-toggler" data-toggle="collapse"
+                                    ${ isNormalMode ? 'data-target="#injectables-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' : 'data-target="#xs-injectables-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' }>
+                                    <span class="icon ion-md-arrow-round-down"></span>
+                                    <span>Injectables</span>
+                                    <span class="icon ion-ios-arrow-down"></span>
+                                </div>
+                                <ul class="links collapse"
+                                    ${ isNormalMode ? 'id="injectables-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' : 'id="xs-injectables-links-module-ContactListModule-11ca33d5a121d975d5e8d0ad7be80801"' }>
+                                        <li class="link">
+                                            <a href="injectables/DatabaseService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules"}>DatabaseService</a>
+                                        </li>
+                                </ul>
+                            </li>
                     </li>
                     <li class="link">
                         <a href="modules/ContactManageModule.html" data-type="entity-link">ContactManageModule</a>
