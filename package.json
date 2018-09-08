@@ -23,9 +23,9 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "browser-database": "^1.0.4",
-    "contact-manage": "^1.0.3",
-    "contact-list": "^1.0.3",
+    "browser-database": "^1.0.5",
+    "contact-manage": "^1.0.4",
+    "contact-list": "^1.0.4",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"

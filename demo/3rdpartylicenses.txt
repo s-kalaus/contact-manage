@@ -120,15 +120,15 @@ MIT
 MIT
 MIT
 
-browser-database@1.0.4
+browser-database@1.0.5
 MIT
 MIT
 
-contact-list@1.0.3
+contact-list@1.0.4
 MIT
 MIT
 
-contact-manage@1.0.3
+contact-manage@1.0.4
 MIT
 MIT
 
