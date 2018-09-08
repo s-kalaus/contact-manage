@@ -1,6 +1,26 @@
 {
   "name": "contact-list",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "description": "Bootstrap 4 / Angular based list of contacts angular component",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/s-kalaus/contact-manage.git"
+  },
+  "keywords": [
+    "contact",
+    "angular",
+    "list"
+  ],
+  "author": {
+    "name": "Sergey Kalaus",
+    "email": "sergey@kalaus.ru",
+    "url": "http://kalaus.ru"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-kalaus/contact-manage/issues"
+  },
+  "homepage": "https://github.com/s-kalaus/contact-manage#readme",
   "peerDependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",

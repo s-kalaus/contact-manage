@@ -9,7 +9,6 @@
     "coverage": "ng test --code-coverage",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "build-manage": "ng-packagr -p src/package/manage/ng-package.json",
     "build-list": "ng-packagr -p src/package/list/ng-package.json"
   },

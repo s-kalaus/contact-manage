@@ -1,27 +1,21 @@
-# ContactManage
+# contact-manage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Meta-package for `contact-list` and `contact-manage` Angular modules.
 
-## Development server
+[![travis ci](https://travis-ci.org/s-kalaus/contact-manage.svg?branch=master)](https://travis-ci.org/s-kalaus/contact-manage)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Coverage Report](https://s-kalaus.github.io/contact-manage/coverage/class/index.html)
 
-## Code scaffolding
+[Documentation](https://s-kalaus.github.io/contact-manage/documentation/index.html)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Demo](https://s-kalaus.github.io/contact-manage/demo/index.html)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Development
+* `npm start` - run developemnt version (it will be served on localhost:4200)
+* `npm run build` - build production version `/demo` folder
+* `npm run test` - run karma unit tests
+* `npm run lint` - run linter
+* `npm run coverage` - run karma unit tests & generate coverage report to `/coverage` folder
+* `npm run doc` - gerenate documentation to `/documentation` folder
+* `npm run build-manage` - build dist version of `contact-manage` npm package `/dist/contact-manage`
+* `npm run build-list` - build dist version of `contact-list` npm package `/dist/contact-list`

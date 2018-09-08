@@ -1,6 +1,28 @@
 {
   "name": "contact-manage",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "description": "Bootstrap 4 / Angular based contacts add/edits forms",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/s-kalaus/contact-manage.git"
+  },
+  "keywords": [
+    "contact",
+    "angular",
+    "add",
+    "edit",
+    "form"
+  ],
+  "author": {
+    "name": "Sergey Kalaus",
+    "email": "sergey@kalaus.ru",
+    "url": "http://kalaus.ru"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-kalaus/contact-manage/issues"
+  },
+  "homepage": "https://github.com/s-kalaus/contact-manage#readme",
   "peerDependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
