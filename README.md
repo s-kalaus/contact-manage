@@ -4,7 +4,7 @@ Meta-package for `contact-list` and `contact-manage` Angular modules.
 
 [![travis ci](https://travis-ci.org/s-kalaus/contact-manage.svg?branch=master)](https://travis-ci.org/s-kalaus/contact-manage)
 
-[Coverage Report](https://s-kalaus.github.io/contact-manage/coverage/class/index.html)
+[Coverage Report](https://s-kalaus.github.io/contact-manage/coverage/index.html)
 
 [Documentation](https://s-kalaus.github.io/contact-manage/documentation/index.html)
 

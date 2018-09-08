@@ -4,7 +4,11 @@ Bootstrap 4 / Angular based add/edit form for contacts
 
 [![travis ci](https://travis-ci.org/s-kalaus/contact-manage.svg?branch=master)](https://travis-ci.org/s-kalaus/contact-manage) [![npm version](https://badge.fury.io/js/contact-manage.svg)](https://badge.fury.io/js/contact-manage)
 
-[Coverage Report](https://s-kalaus.github.io/contact-manage/coverage/class/index.html)
+[Coverage Report](https://s-kalaus.github.io/contact-manage/coverage/index.html)
+
+[Documentation](https://s-kalaus.github.io/contact-manage/documentation/index.html)
+
+[Demo](https://s-kalaus.github.io/contact-manage/demo/index.html)
 ## Installation
 `npm install contact-manage` - install package
 ## Usage

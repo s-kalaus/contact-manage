@@ -124,11 +124,11 @@ browser-database@1.0.4
 MIT
 MIT
 
-contact-list@1.0.2
+contact-list@1.0.3
 MIT
 MIT
 
-contact-manage@1.0.2
+contact-manage@1.0.3
 MIT
 MIT
 

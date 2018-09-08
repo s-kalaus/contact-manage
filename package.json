@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /contact-manage/demo/",
     "test": "ng test",
     "coverage": "ng test --code-coverage",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
@@ -24,8 +24,8 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "browser-database": "^1.0.4",
-    "contact-manage": "^1.0.2",
-    "contact-list": "^1.0.2",
+    "contact-manage": "^1.0.3",
+    "contact-list": "^1.0.3",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
